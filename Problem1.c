@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main(){
   int sum;
 
@@ -11,7 +12,7 @@ int main(){
     }
   }
 
-  printf("%d",sum);
+  printf("%d\n",sum);
   return sum;
 
 }
