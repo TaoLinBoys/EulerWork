@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+int nFib(int n){
+  if(n==1 || n==2){
+    return n;
+  }
+  return nFib(n-1)+nFib(n-2);
+}
+
+int main(){
+  int sum;
+
+  int i;
+  for(i=2; nFib(i)<4000000; i++){
+    if( !(nFib(i)%2) ){
+      sum += nFib(i);
+    }
+  }
+
+  printf("%d\n",sum);
+  return 0;
+}
+*/
+
+int evenFibSum() {
+  int sum = 0;
+  int n = 1;
+  int curr = nthFib(n);
+  while (curr < 4000000) {
+    curr = nthFib(n);
+    if (curr%2 == 0) sum += curr;
+    n++;
+  }
+  return sum;
+}
+
+int nthFib(int n) {
+  if (n==1 || n==2) return n;
+  return nthFib(n-1) + nthFib(n-2);
+}
+
+int main(){
+  
+}
